@@ -27,29 +27,41 @@
 
 ---
 
-## Quickstart
+## Installation & Quickstart
 
-### 1. Installation
+### Option A: Install via npm (Recommended — No cloning or `cd` needed)
+
+Install globally directly from GitHub:
 
 ```bash
-# Clone the repository
+npm install -g github:clovieflow/rikkarouter
+```
+
+Then run `rikka` anywhere in your terminal:
+
+```bash
+rikka start
+```
+
+Or run instantly without installing using `npx`:
+
+```bash
+npx github:clovieflow/rikkarouter start
+```
+
+---
+
+### Option B: Run from Source (For local development)
+
+```bash
 git clone https://github.com/clovieflow/rikkarouter.git
 cd rikkarouter
-
-# Install dependencies and build dashboard
 npm install
-npm run build:ui
-```
-
-### 2. Start the Router
-
-```bash
 npm start
-# Gateway listening on http://127.0.0.1:20200
-# Dashboard accessible at http://127.0.0.1:20200/
 ```
 
-*On first boot, Rikka generates a master API key (`rk_...`) and stores only its SHA-256 hash in `~/.rikka/rikka.db`.*
+*The router starts at `http://127.0.0.1:20200` with the web dashboard at `http://127.0.0.1:20200/`.*<br />
+*On first boot, Rikka generates a master API key (`rk_...`) and stores its SHA-256 hash in `~/.rikka/rikka.db`.*
 
 ---
 
