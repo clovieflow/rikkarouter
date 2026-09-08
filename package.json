@@ -1,0 +1,36 @@
+{
+  "name": "rikka",
+  "version": "0.1.0",
+  "description": "Lightweight local AI coding router — OpenAI/Anthropic-compatible gateway with provider fallback",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "rikka": "bin/rikka.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/server/main.ts",
+    "start": "node --env-file-if-exists=.env src/server/main.ts",
+    "typecheck": "tsc --noEmit",
+    "build:ui": "npm --prefix dashboard install --no-audit --no-fund && npm --prefix dashboard run build",
+    "dev:ui": "npm --prefix dashboard run dev"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "hono": "^4.10.0",
+    "undici": "^8.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
